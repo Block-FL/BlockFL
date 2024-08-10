@@ -1,0 +1,11 @@
+{
+  "name": "blockfl",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "test": "echo"
+  },
+  "license": "ISC",
+  "workspaces" : ["marketplace", "circuits", "contracts"]
+}
