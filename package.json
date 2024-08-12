@@ -7,5 +7,13 @@
     "test": "echo"
   },
   "license": "ISC",
-  "workspaces" : ["marketplace", "circuits", "contracts"]
+  "workspaces": [
+    "marketplace",
+    "circuits",
+    "contracts"
+  ],
+  "dependencies": {
+    "@heroicons/react": "^2.1.5",
+    "@material-tailwind/react": "^2.1.9"
+  }
 }
