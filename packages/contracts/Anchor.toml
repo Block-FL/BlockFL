@@ -4,16 +4,27 @@
 resolution = true
 skip-lint = false
 
-[programs.localnet]
-rewards = "6QNt2egeDnNuX8peia8QXEapztQSv6f5EV3MHgJ2mcmD"
-slashing = ""
-
 [registry]
 url = "https://api.apr.dev"
 
+# Change the cluster to localnet
 [provider]
-cluster = "Localnet"
+cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
+
+# Specify deployment addresses for localnet
+[programs.localnet]
+rewards = "A35dumYpPgWwUfYYed3FUeFFVHHB7zTugSZM1ho7EPXV"
+slashing = "ADMWFhVnbL6RiudDandcYkhpkZx2FMz8bEx5f97zcS4X"
+
+# Define your programs
+[programs.rewards]
+name = "rewards"
+path = "./programs/rewards"
+
+[programs.slashing]
+name = "slashing"
+path = "./programs/slashing"
