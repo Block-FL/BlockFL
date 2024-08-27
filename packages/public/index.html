@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reward Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 1em;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label, input {
+            margin-bottom: 1em;
+        }
+        input[type="number"] {
+            padding: 0.5em;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 0.5em 1em;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        pre {
+            text-align: left;
+            margin-top: 1em;
+            background: #f8f8f8;
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            max-height: 300px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reward Manager</h1>
+        <form id="witness-form">
+            <label for="inputX">Enter X: </label>
+            <input type="number" id="inputX" name="inputX" required>
+            <button type="submit">Generate Witness</button>
+        </form>
+        <pre id="witness-output"></pre>
+    </div>
+
+    <script>
+        document.getElementById('witness-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const inputX = document.getElementById('inputX').value;
+            const response = await fetch('/generate-witness', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ X: parseInt(inputX) })
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                document.getElementById('witness-output').textContent = JSON.stringify(result.witness, null, 2);
+            } else {
+                document.getElementById('witness-output').textContent = 'Error generating witness';
+            }
+        });
+    </script>
+</body>
+</html>

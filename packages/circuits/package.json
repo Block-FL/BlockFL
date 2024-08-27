@@ -1,0 +1,15 @@
+{
+  "name": "blockfl",
+  "version": "1.0.0",
+  "description": "decentralised training of AI models",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "star-gazer111",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "snarkjs": "^0.7.4"
+  }
+}
