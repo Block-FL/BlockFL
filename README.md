@@ -1,6 +1,10 @@
 # BlockFL
 
 ![Build status](https://github.com/Block-FL/BlockFL/actions/workflows/rust.yml/badge.svg)
+![Python compiler status](https://github.com/Block-FL/BlockFL/actions/workflows/python-package-conda.yml/badge.svg)
+![Node status](https://github.com/Block-FL/BlockFL/actions/workflows/npm-grunt.yml/badge.svg)
+
+
 
 
 Happy AI
