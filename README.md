@@ -1,5 +1,8 @@
 # BlockFL
 
+![Build status](https://github.com/Block-FL/BlockFL/actions/workflows/rust.yml/badge.svg)
+
+
 Happy AI
 
 rewards
