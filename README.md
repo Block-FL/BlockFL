@@ -1,5 +1,8 @@
 # BlockFL
 
+![Build Status](https://circleci.com/gh/Block-FL/BlockFL.svg?style=shield&circle-token=:circle-token)
+
+
 Happy AI
 
 rewards
