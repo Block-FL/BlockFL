@@ -4,6 +4,10 @@
 ![Python compiler status](https://github.com/Block-FL/BlockFL/actions/workflows/python-package-conda.yml/badge.svg)
 ![Node status](https://github.com/Block-FL/BlockFL/actions/workflows/npm-grunt.yml/badge.svg)
 
+# Master Repository for BlockFL
+
+Training AI Models in a decentralised way leveraging Solana!
+
 [Demo1](https://www.loom.com/share/831047d5193c4d25ac15d8b7579c9ab6)
 
 [Demo2](https://www.loom.com/share/dfdc2fde66ab453d9fc8bb2791a5cfc3)
